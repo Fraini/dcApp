@@ -8,6 +8,7 @@ import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
+import { DetalleComponent } from '../pages/detalle/detalle.component';
 
 //Servicios
 import { ListaDeseosService } from '../app/services/lista-deseos-services';
@@ -16,14 +17,18 @@ import { ListaDeseosService } from '../app/services/lista-deseos-services';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//Pipes
+import { PendientesPipe } from '../app/pipes/pendientes.pipes';
 
 
 @NgModule({
   declarations: [
     MyApp,
+    PendientesPipe,
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
+    DetalleComponent,
     TabsPage
     
   ],
@@ -37,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent,
+    DetalleComponent,
     TabsPage
   ], 
   //En los provides van siempre los servicios
